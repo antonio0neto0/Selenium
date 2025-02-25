@@ -12,7 +12,7 @@ chrome_options = Options()
 --disable-notifications # Desabilita notificações
 --disable-gpu # Desabilita renderização com GPU
 '''
-arguments = ['--lang=pt-BR', '--window-size=500,500', '--incognito']
+arguments = ['--lang=pt-BR', '--window-size=800,600', '--incognito']
 for argument in arguments:
     chrome_options.add_argument(argument)
 # Lista de opções experimentais(nem todas estão documentadas) https://chromium.googlesource.com/chromium/src/+/master/chrome/common/pref_names.cc
