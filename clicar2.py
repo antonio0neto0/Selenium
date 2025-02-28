@@ -65,5 +65,6 @@ botao_login = driver.find_element(By.CLASS_NAME, 'btn.btn-primary')
 sleep(1)
 botao_login.click()
 
+'''No f12 usa cntrl F para ver se o elemento é unico'''
 input('')
 driver.close()
