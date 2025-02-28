@@ -1,5 +1,6 @@
 # selenium 4
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 
 def iniciar_driver():
@@ -38,5 +39,5 @@ def iniciar_driver():
     return driver
 
 driver = iniciar_driver()
-driver.get('https://www.devaprender.com')
+driver.get('https://cursoautomacao.netlify.app/')
 input('')
