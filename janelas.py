@@ -40,6 +40,7 @@ def iniciar_driver():
     driver = webdriver.Chrome(options=chrome_options)
     return driver
 
+nome =  input('digite seu nome: ')
 driver = iniciar_driver()
 driver.get('https://cursoautomacao.netlify.app/')
 # 1) Salvar nossa janela atual
@@ -63,7 +64,7 @@ for janela in janelas:
         sleep(2)
         campo_pesquisa = driver.find_element(By.ID, "campo_pesquisa")
         sleep(2)
-        campo_pesquisa.send_keys('computador')
+        campo_pesquisa.send_keys(nome)
         sleep(2)
         botao_pesquisar = driver.find_element(By.ID, "fazer_pesquisa")
         sleep(2)
