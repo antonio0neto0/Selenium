@@ -8,7 +8,7 @@ def iniciar_driver():
     chrome_options = Options()
     # Fonte de opções de switches https://peter.sh/experiments/chromium-command-line-switches/
 
-    arguments = ['--lang=pt-BR', '--window-size=800,600',
+    arguments = ['--lang=pt-BR', '--window-size=1300,1000',
                 '--incognito']
     ''' Common arguments
     --start-maximized # Inicia maximizado
