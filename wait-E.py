@@ -6,6 +6,7 @@ from time import sleep
 from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import *
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as condicao_esperada
 
 def iniciar_driver():
     chrome_options = Options()
@@ -54,5 +55,22 @@ def iniciar_driver():
     return driver,wait
 
 driver, wait = iniciar_driver()
-driver.get('https://cursoautomacao.netlify.app/')
+driver.get('https://google.com/flights')
+
+driver.execute_script('window.scrollTo(0,800);')
+
+sugestoes_de_voo = wait.until(condicao_esperada.visibility_of_all_elements_located(
+    (By.XPATH, "//div[@class='OJsCSd']")))
+
+# sugestoes_de_voo = wait.until(condicao_esperada.visibility_of_any_elements_located(
+#     (By.XPATH, "//div[@class='wIuJz']")))
+
+sugestoes_de_voo[1].click()
+
+
+sleep(5)
+
+
+# sugestoes_de_voo = driver.find_elements(By.XPATH, "//div[@class='wIuJz]")
+
 input('')
